@@ -1,0 +1,92 @@
+---
+title: "Tutorial R, lets practice!"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## About package *learnr*
+
+> Create interactive tutorials using R Markdown. Use a combination of narrative, figures, videos, exercises, and quizzes to create self-paced tutorials for learning about R and R packages.
+
+## Basic Mathematics Operations
+
+- Addition
+- Subtraction
+- Multiplication
+- Division
+
+### Exercise 1
+
+Make some calculations and check the answers.
+
+```{r addition, exercise=TRUE}
+1 + 1
+```
+
+## R Datasets
+
+### Exercise 2
+
+Select an other R database and use the function **str()** to visualization of structure of data.
+
+```{r answer, exercise=TRUE}
+datasets::iris
+str(iris)
+```
+
+## Vector Position
+
+### Exercise 3
+ 
+```{r question, echo=FALSE}
+  question("What number is the letter A in the *English* alphabet?",
+    answer("8"),
+    answer("14"),
+    answer("1", correct = TRUE),
+    answer("23")
+  )
+```
+
+## Importing Data
+
+### Exercise 4
+
+```{r quiz1, echo=FALSE}
+  question("What the function to import tables? (select ALL that apply)",
+    answer("read.table", correct = TRUE),
+    answer("ggplot"),
+    answer("read.csv", correct = TRUE),
+    answer("read.delim", correct = TRUE),
+    incorrect = "Incorrect. You're on Earth, in the Milky Way, at a computer."
+  )
+```
+
+## Package ggplot2
+
+### Exercise 5
+
+```{r question_checkbox, echo=FALSE}
+question_checkbox(
+"Select all the toppings that belong on a package ggplot2:",
+answer("theme", correct = TRUE),
+answer("ggplot", correct = TRUE),
+answer("geom", correct = TRUE),
+answer("aes", correct = TRUE),
+answer("plot", message = "This function create basic graphics in R"),
+answer("tibble"),
+answer("rmarkdown"),
+answer("rnorm"),
+random_answer_order = TRUE,
+allow_retry = TRUE,
+try_again = "Be sure to select all four toppings!"
+)
+```
+
+## Tutorial video
+
+![](https://www.youtube.com/watch?v=-uwJOuAg-JY)
